@@ -1,5 +1,5 @@
-ISClient
-========
+ImageSleuthClient2
+==================
 
 Using the ISClient requires an ImageSleuth account. You may obtain an account at ImageSleuth.com. We offer free trials to allow you to assess the quality of our service.
 
@@ -7,7 +7,7 @@ Once you set up your user account at ImageSleuth.com, login and access your user
 
 Once you have download the executable, navigate to the download directory and type:
 
-java –jar ISClient-1.0-SNAPSHOT.jar
+java –jar ImageSleuthClient2-1.0-SNAPSHOT.jar
 
 You may run the client in another directory, but you will either have to put the jar file in your classpath or specify the path to the jar file in the command.
 
@@ -22,5 +22,4 @@ base-url/api/v1/results, which is a get command that sends the job id in paramet
     a code of 202 means that the result is not yet available, so please poll again later.
 Each call requires basic authentication, where the secret-key, secret-token represent the user/password respectively.
 
-Note
-The ISClient code is provided as an example of how to access the ImageSleuth web service. This example is intended for use on folders containing a small number (less than 250) of images as it performs all the Posts before applying the Gets. A more robust implementation will require running Post and Get commands concurrently, e.g. submit a number of Posts, then perform Gets to poll for results, as results come back, submit new Posts. We will be releasing a revised client that can handle larger folders of images shortly.
+This version of the client processes POST and GET commands concurrently, so it is suited for processing large repositories of images.
